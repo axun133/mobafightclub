@@ -49,6 +49,20 @@
                 max-height: 400px;
             }
         }
+        .game-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .game-tab.active {
+            background-color: #007AFF;
+            color: white;
+        }
+        .game-content {
+            display: none;
+        }
+        .game-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -70,20 +84,43 @@
 
     <main class="container mx-auto px-4 py-8">
         <section id="featured" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Featured Game</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Featured Games</h2>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <div class="p-4 md:p-6">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Mini Royale: Battle Arena</h3>
-                    <p class="text-gray-600 mb-4">Engage in fast-paced strategic battles with players worldwide in this exciting MOBA game!</p>
-                    
-                    <div class="game-container w-full bg-black rounded-lg overflow-hidden mb-4">
-                        <!-- 使用HTML5游戏，更兼容本地测试 -->
-                        <iframe src="https://games.construct.net/937/latest" class="w-full h-full border-0" frameborder="0" scrolling="no" allow="autoplay; fullscreen; microphone" allowfullscreen sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation"></iframe>
+                    <!-- 游戏选择标签 -->
+                    <div class="flex mb-4 border-b">
+                        <div id="hextris-tab" class="game-tab active px-4 py-2 font-semibold rounded-t-lg">Hextris</div>
+                        <div id="lifeRestart-tab" class="game-tab px-4 py-2 font-semibold rounded-t-lg">人生重开模拟器</div>
                     </div>
                     
-                    <div class="bg-gray-100 p-4 rounded-lg">
-                        <h4 class="font-semibold mb-2">How to Play:</h4>
-                        <p>Use WASD or arrow keys to move your character. Mouse to aim and left-click to attack. Collect power-ups and defeat opponents to score points. The last player standing wins!</p>
+                    <!-- Hextris 游戏 -->
+                    <div id="hextris-game" class="game-content active">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-2">Hextris: 六边形俄罗斯方块</h3>
+                        <p class="text-gray-600 mb-4">一款创新的六边形俄罗斯方块游戏，通过连接相同颜色的块来获得高分！</p>
+                        
+                        <div class="game-container w-full bg-black rounded-lg overflow-hidden mb-4">
+                            <iframe src="https://hextris.io/" class="w-full h-full border-0" frameborder="0" scrolling="no" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">如何游玩:</h4>
+                            <p>使用左/右方向键旋转六边形，向下方向键可以加速下落。通过连接3种或以上相同颜色的块来清除块并获得积分，连续消除有积分加倍的奖励。在手机上可以通过触摸屏幕左右滑动来控制。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 人生重开模拟器 游戏 -->
+                    <div id="lifeRestart-game" class="game-content">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-2">人生重开模拟器</h3>
+                        <p class="text-gray-600 mb-4">模拟人生的文字冒险游戏，每一次重开都是不同的人生体验！</p>
+                        
+                        <div class="game-container w-full bg-black rounded-lg overflow-hidden mb-4">
+                            <iframe src="https://liferestart.syaro.io/public/index.html" class="w-full h-full border-0" frameborder="0" scrolling="no" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">如何游玩:</h4>
+                            <p>点击"立即重开"开始游戏，在开局时选择天赋和分配初始属性，然后观看你的人生轨迹。每次游戏结束后可以点击"再次重开"开始新的人生。游戏支持中文，操作简单直观。</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,5 +220,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // 游戏标签切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const hextrisTab = document.getElementById('hextris-tab');
+            const lifeRestartTab = document.getElementById('lifeRestart-tab');
+            const hextrisGame = document.getElementById('hextris-game');
+            const lifeRestartGame = document.getElementById('lifeRestart-game');
+            
+            hextrisTab.addEventListener('click', function() {
+                hextrisTab.classList.add('active');
+                lifeRestartTab.classList.remove('active');
+                hextrisGame.classList.add('active');
+                lifeRestartGame.classList.remove('active');
+            });
+            
+            lifeRestartTab.addEventListener('click', function() {
+                lifeRestartTab.classList.add('active');
+                hextrisTab.classList.remove('active');
+                lifeRestartGame.classList.add('active');
+                hextrisGame.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
