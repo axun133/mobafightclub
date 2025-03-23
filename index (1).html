@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moba Fight Club - The ultimate online gaming platform for MOBA enthusiasts. Play exciting games for free and compete with players worldwide.">
+    <meta name="keywords" content="moba games, online games, fight games, free games, multiplayer games">
+    <meta name="author" content="Moba Fight Club">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mobafightclub.online/">
+    <title>Moba Fight Club | Free Online MOBA Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            indigo: '#5856D6',
+                            purple: '#AF52DE',
+                            pink: '#FF2D55',
+                            red: '#FF3B30',
+                            orange: '#FF9500',
+                            yellow: '#FFCC00',
+                            green: '#34C759',
+                            teal: '#5AC8FA',
+                            gray: '#8E8E93',
+                            darkgray: '#636366',
+                            lightgray: '#AEAEB2'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        /* Additional custom styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 600px;
+        }
+        @media (max-width: 768px) {
+            .game-container {
+                aspect-ratio: 4/3;
+                max-height: 400px;
+            }
+        }
+        .game-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .game-tab.active {
+            background-color: #007AFF;
+            color: white;
+        }
+        .game-content {
+            display: none;
+        }
+        .game-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-gradient-to-r from-apple-blue to-apple-indigo text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6 md:py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">Moba Fight Club</h1>
+                    <p class="text-lg md:text-xl mt-2 text-white/90">Experience the thrill of strategic battle arena games online!</p>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="#featured" class="px-3 py-2 rounded hover:bg-white/20 transition">Games</a>
+                    <a href="#about" class="px-3 py-2 rounded hover:bg-white/20 transition">About</a>
+                    <a href="#faq" class="px-3 py-2 rounded hover:bg-white/20 transition">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="featured" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Featured Games</h2>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-4 md:p-6">
+                    <!-- 游戏选择标签 -->
+                    <div class="flex mb-4 border-b">
+                        <div id="hextris-tab" class="game-tab active px-4 py-2 font-semibold rounded-t-lg">Hextris</div>
+                        <div id="lifeRestart-tab" class="game-tab px-4 py-2 font-semibold rounded-t-lg">人生重开模拟器</div>
+                    </div>
+                    
+                    <!-- Hextris 游戏 -->
+                    <div id="hextris-game" class="game-content active">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-2">Hextris: 六边形俄罗斯方块</h3>
+                        <p class="text-gray-600 mb-4">一款创新的六边形俄罗斯方块游戏，通过连接相同颜色的块来获得高分！</p>
+                        
+                        <div class="game-container w-full bg-black rounded-lg overflow-hidden mb-4">
+                            <iframe src="https://hextris.io/" class="w-full h-full border-0" frameborder="0" scrolling="no" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">如何游玩:</h4>
+                            <p>使用左/右方向键旋转六边形，向下方向键可以加速下落。通过连接3种或以上相同颜色的块来清除块并获得积分，连续消除有积分加倍的奖励。在手机上可以通过触摸屏幕左右滑动来控制。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 人生重开模拟器 游戏 -->
+                    <div id="lifeRestart-game" class="game-content">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-2">人生重开模拟器</h3>
+                        <p class="text-gray-600 mb-4">模拟人生的文字冒险游戏，每一次重开都是不同的人生体验！</p>
+                        
+                        <div class="game-container w-full bg-black rounded-lg overflow-hidden mb-4">
+                            <iframe src="https://liferestart.syaro.io/public/index.html" class="w-full h-full border-0" frameborder="0" scrolling="no" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">如何游玩:</h4>
+                            <p>点击"立即重开"开始游戏，在开局时选择天赋和分配初始属性，然后观看你的人生轨迹。每次游戏结束后可以点击"再次重开"开始新的人生。游戏支持中文，操作简单直观。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">More Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Game Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-apple-purple h-40 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Tower Defense</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Strategic Tower Defense</h3>
+                        <p class="text-gray-600 text-sm">Build towers and defend your base against waves of enemies.</p>
+                        <a href="tower-defense.html" class="mt-3 bg-apple-purple text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition inline-block">Play Now</a>
+                    </div>
+                </div>
+                
+                <!-- Game Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-apple-green h-40 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Hero Clash</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Hero Clash: Legends</h3>
+                        <p class="text-gray-600 text-sm">Choose your hero and battle in epic 3v3 team matches.</p>
+                        <a href="hero-clash.html" class="mt-3 bg-apple-green text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition inline-block">Play Now</a>
+                    </div>
+                </div>
+                
+                <!-- Game Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="bg-apple-orange h-40 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Battle Royale</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Last Survivor: Battle Royale</h3>
+                        <p class="text-gray-600 text-sm">Fight against 99 other players to be the last one standing.</p>
+                        <a href="battle-royale.html" class="mt-3 bg-apple-orange text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition inline-block">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">About Moba Fight Club</h2>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-6">
+                    <p class="mb-4">Moba Fight Club is your premier destination for free online multiplayer battle arena games. We curate the best strategic combat experiences that you can play directly in your browser without downloads or installations.</p>
+                    <p class="mb-4">Our platform features a variety of game styles including traditional MOBAs, tower defense, battle royale, and team-based strategy games. All games are optimized for both desktop and mobile play.</p>
+                    <p>Join thousands of players worldwide in exciting competitive gameplay. Create an account to track your progress, join tournaments, and climb the global leaderboards!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-4 md:p-6">
+                        <h3 class="font-semibold mb-2">Do I need to create an account to play?</h3>
+                        <p class="text-gray-600">No, all games can be played as a guest. However, creating a free account allows you to save your progress and participate in tournaments.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-4 md:p-6">
+                        <h3 class="font-semibold mb-2">Are these games free to play?</h3>
+                        <p class="text-gray-600">Yes, all games on Moba Fight Club are completely free to play. Some games offer optional in-game purchases for cosmetic items.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-4 md:p-6">
+                        <h3 class="font-semibold mb-2">Can I play on my mobile device?</h3>
+                        <p class="text-gray-600">Absolutely! Our website is fully responsive and all games are optimized for both desktop and mobile play.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-bold">Moba Fight Club</h2>
+                    <p class="text-gray-400">© 2025 All Rights Reserved</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-apple-blue transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-apple-blue transition">Terms of Service</a>
+                    <a href="#" class="hover:text-apple-blue transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 游戏标签切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const hextrisTab = document.getElementById('hextris-tab');
+            const lifeRestartTab = document.getElementById('lifeRestart-tab');
+            const hextrisGame = document.getElementById('hextris-game');
+            const lifeRestartGame = document.getElementById('lifeRestart-game');
+            
+            hextrisTab.addEventListener('click', function() {
+                hextrisTab.classList.add('active');
+                lifeRestartTab.classList.remove('active');
+                hextrisGame.classList.add('active');
+                lifeRestartGame.classList.remove('active');
+            });
+            
+            lifeRestartTab.addEventListener('click', function() {
+                lifeRestartTab.classList.add('active');
+                hextrisTab.classList.remove('active');
+                lifeRestartGame.classList.add('active');
+                hextrisGame.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
